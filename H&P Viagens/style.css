@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -6,26 +10,42 @@ body {
     font-family: sans-serif;
     margin: 0;
     background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
 }
 
+
+
+footer {
+    flex-shrink: 0;
+}
+
+
+#viagens {
+    scroll-margin-top: 100px ;
+}
+
+
 .area-principal {
+    flex: 1 0 auto;
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
 }
 
-/* Ajuste no Container Geral do Cabeçalho */
+
 .cabecalho {
     background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra suave para dar profundidade */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+
     padding: 10px 0;
 }
 
 .container-header {
-    max-width: 1000px; /* Alinhado com o seu .area-principal */
+    max-width: 1000px; 
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -33,41 +53,40 @@ body {
     padding: 0 20px;
 }
 
-/* Ajuste do Logo */
+
 .nome-do-site img {
-    height: 50px; /* Define um tamanho fixo para não quebrar o layout */
+    height: 50px; 
     display: block;
 }
 
-/* Menu de Navegação */
+
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px; /* Espaço entre os links */
+    gap: 30px; 
     margin: 0;
     padding: 0;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #333; /* Cor escura para contrastar com o fundo branco */
+    color: #333; 
     font-weight: 600;
     font-size: 14px;
-    transition: color 0.3s; /* Suaviza a mudança de cor no hover */
+    transition: color 0.3s; 
 }
 
-/* Efeito ao passar o mouse */
+
 .nav-links a:hover {
-    color: #0047ba; /* Usa o azul da sua identidade visual */
+    color: #0047ba; 
 }
 
 
 .nome-do-site img {
-    height: 60px; /* Define um tamanho fixo elegante */
-    width: auto;  /* Mantém a proporção da imagem */
+    height: 60px; 
+    width: auto;  
     display: block;
 }
-
 
 
 
@@ -75,6 +94,7 @@ body {
     display: flex;
     gap: 15px;
     margin-bottom: 30px;
+    align-items: flex-start;
 }
 
 .coluna-direita {
@@ -103,6 +123,8 @@ body {
     overflow: hidden;
 }
 
+
+
 .espaco-da-imagem {
     width: 100%;
     height: auto;
@@ -113,7 +135,7 @@ body {
 .espaco-da-imagem img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     background-color: #eee;
 }
 
@@ -134,22 +156,195 @@ body {
     background-color: #ff6600;
 }
 
-.titulo-ferias {
+.titulo-viagens {
     color: #0047ba;
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
 }
 
 .tres-colunas {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
 
-.tres-colunas .caixa-foto {
-    flex: 1;
-}
+
 
 .tres-colunas .caixa-foto img{
     height: 180px;
     object-fit: cover;
+}
+
+
+
+
+
+.footer-simples {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  margin-bottom: 20px;
+  min-width: 200px;
+}
+
+.footer-col h4 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #555;
+  display: inline-block;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: #ccc; 
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s; 
+}
+
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  padding-top: 20px;
+  font-size: 0.9em;
+}
+
+.container-sobre {
+    font-size: 18px;
+    color:#555;
+    line-height: 1.8;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    padding: 30px;
+}
+
+@media (min-width: 769px) {
+
+    .cabecalho {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+
+    .caixa-foto {
+        transition: transform 0.3s ease;
+    }
+
+    .caixa-foto:hover {
+        transform: scale(1.05);
+    }
+
+    .tres-colunas .caixa-foto:hover {
+        transform: scale(1.1);
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+    
+
+    html {
+        font-size: 110%;
+    }
+
+    .area-principal {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+
+
+    .container-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .foto-grande {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+    .foto-grande .espaco-da-imagem img {
+        height: 320px;
+    }
+    
+
+    .fotos-destaque {
+        flex-direction: column;
+    }
+
+    .fotos-destaque .caixa-foto img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+
+    .coluna-direita {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+
+    .coluna-direita .caixa-foto img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .foto-grande {
+        width: 100%;
+    }
+
+    .tres-colunas {
+        flex-direction: column;
+    }
+
+    .tres-colunas .caixa-foto {
+        width: 100%;
+        
+    }
+
+
+
+    .espaco-da-imagem img {
+        width: 100%;
+        height: auto;
+    }
 }
