@@ -2,53 +2,74 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>H&P</title>
+    <title>H&P Viagens</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="cabecalho">
-        <div class="nome-do-site">H&P</div>
-        <div class="icones-topo">
-            <span>🔍</span>
-            <span>⣿</span>
+        <div class="container-header">
+            <div class="nome-do-site">
+                <img src="img/H&P Logo.png" alt="">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#destaque">Viagens em Destaque</a></li>
+                    <li><a href="#ferias">Viagens para as férias</a></li>
+                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main class="area-principal">
         
+        <h2>Viagens em destaque</h2>
         <section class="fotos-destaque">
             <div class="caixa-foto foto-grande azul">
-                <div class="espaco-da-imagem"></div>
-                <div class="legenda"></div>
+                <div class="espaco-da-imagem">
+                    <img src="img/Paris.jpg" alt="Viagens para Paris">
+                </div>
+                <div class="legenda">Paris - França</div>
             </div>
             
             <div class="coluna-direita">
                 <div class="caixa-foto laranja">
-                    <div class="espaco-da-imagem"></div>
-                    <div class="legenda"></div>
+                    <div class="espaco-da-imagem">
+                        <img src="img/Madrid.jpg" alt="Viagens para Madrid">
+                    </div>
+                    <div class="legenda">Madrid - Espanha</div>
                 </div>
                 <div class="caixa-foto laranja">
-                    <div class="espaco-da-imagem"></div>
-                    <div class="legenda"></div>
+                    <div class="espaco-da-imagem">
+                        <img src="img/Rio.jpg" alt="Viagens para Rio de Janeiro">
+                    </div>
+                    <div class="legenda">Rio de Janeiro - Brasil</div>
                 </div>
             </div>
         </section>
-
-        <section class="sessao-feriados">
-            <h2 class="titulo-feriados"></h2>
+        
+        <section class="sessao-ferias">
+            <h2 id="ferias"  class="titulo-ferias">Viagens para as ferias</h2>
             <div class="tres-colunas">
                 <div class="caixa-foto azul">
-                    <div class="espaco-da-imagem"></div>
-                    <div class="legenda"></div>
+                    <div class="espaco-da-imagem">
+                        <img src="img/Cancun.jpg" alt="Viagens para Cancun">
+                    </div>
+                    <div class="legenda">Cancun - Mexico</div>
                 </div>
                 <div class="caixa-foto azul">
-                    <div class="espaco-da-imagem"></div>
-                    <div class="legenda"></div>
+                    <div class="espaco-da-imagem">
+                        <img src="img/LA.jpg" alt="Viagens para Los Angeles">
+                    </div>
+                    <div class="legenda">Los Angeles - Estados Unidos</div>
                 </div>
                 <div class="caixa-foto azul">
-                    <div class="espaco-da-imagem"></div>
-                    <div class="legenda"></div>
+                    <div class="espaco-da-imagem">
+                        <img src="img/Santorini.jpg" alt="Viagens para Santorini">
+                    </div>
+                    <div class="legenda">Santorini - Grécia</div>
                 </div>
             </div>
         </section>
