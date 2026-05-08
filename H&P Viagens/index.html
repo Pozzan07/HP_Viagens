@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>H&P Viagens</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="topo">
 
     <header class="cabecalho">
         <div class="container-header">
             <div class="nome-do-site">
-                <img src="img/H&P Logo.png" alt="">
+                <a href="index.html"><img src="img/H&P Logo.png" alt=""></a>
             </div>
             <nav class="navbar">
                 <ul class="nav-links">
-                    <li><a href="#destaque">Viagens em Destaque</a></li>
-                    <li><a href="#ferias">Viagens para as férias</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="#topo">Destaques</a></li>
+                    <li><a href="#viagens">Viagens</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -25,7 +26,7 @@
 
     <main class="area-principal">
         
-        <h2>Viagens em destaque</h2>
+        <h2>Destaques</h2>
         <section class="fotos-destaque">
             <div class="caixa-foto foto-grande azul">
                 <div class="espaco-da-imagem">
@@ -50,8 +51,9 @@
             </div>
         </section>
         
-        <section class="sessao-ferias">
-            <h2 id="ferias"  class="titulo-ferias">Viagens para as ferias</h2>
+
+        <section class="sessao-viagens">
+            <h2 id="viagens"  class="titulo-viagens">Melhores Viagens para as ferias</h2>
             <div class="tres-colunas">
                 <div class="caixa-foto azul">
                     <div class="espaco-da-imagem">
@@ -72,9 +74,60 @@
                     <div class="legenda">Santorini - Grécia</div>
                 </div>
             </div>
+            <br>           
         </section>
 
+        <h2  class="titulo-viagens">Viagens de Inverno</h2>
+        <div class="tres-colunas">
+            <div class="caixa-foto azul">
+                <div class="espaco-da-imagem">
+                    <img src="img/Hokkaido.jpg" alt="Viagens para Hokkaido">
+                </div>
+                <div class="legenda">Hokkaido - Japão</div>
+            </div>
+            <div class="caixa-foto azul">
+                <div class="espaco-da-imagem">
+                    <img src="img/Zermatt.jpg" alt="Viagens para Zermatt">
+                </div>
+                <div class="legenda">Zermatt - Suiça</div>
+            </div>
+            <div class="caixa-foto azul">
+                <div class="espaco-da-imagem">
+                    <img src="img/Rovaniemi.jpg" alt="Viagens para Rovaniemi">
+                </div>
+                <div class="legenda">Rovaniemi - Finlândia</div>
+            </div>
+        </div>
+        <br>
+
     </main>
+
+    <footer id="contato" class="footer-simples">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h3>Minha Marca</h3>
+            <p>Uma breve descrição do seu projeto ou empresa.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <li><a href="#topo">Home</a></li>
+              <li><a href="sobre.html">Sobre</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contato</h4>
+            <p>email@exemplo.com</p>
+            <p>(11) 99999-9999</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 H&P Viagens. Todos os direitos reservados.</p>
+        </div>
+      </footer>
+      
+      
 
 </body>
 </html>
